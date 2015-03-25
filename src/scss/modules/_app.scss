@@ -1,0 +1,43 @@
+.hero {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+}
+
+.hero-day,
+.hero-night {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.hero-day {
+  background-color: whitesmoke;
+  background-image: image-url('assets/img/lamp_day.jpg');
+  transition: max-width 500ms ease-in-out;
+  max-width: 100%;
+  
+  &.is-full {
+    max-width: 100%;
+  }
+  &.is-null {
+    max-width: 0%;
+  }
+
+  @media only screen and (min-width:768px) {
+    max-width: 50%;
+  }
+}
+
+
+.hero-night {
+  background-color: #111;
+  background-image: image-url('assets/img/lamp_night.jpg');
+}
+
