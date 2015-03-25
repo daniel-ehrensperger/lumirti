@@ -1,0 +1,67 @@
+.hero {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  cursor: pointer;
+}
+
+.hero-day,
+.hero-night {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto 60%;
+}
+
+.hero-night {
+  background-color: #111;
+  background-image: image-url('assets/img/lamp_night.jpg');
+  z-index: 1;
+
+  @media only screen and (min-width:768px) {
+    &:hover + .hero-day {
+      max-width: 48%;
+    }
+  }
+}
+
+.hero-day {
+  background-color: #eee;
+  background-image: image-url('assets/img/lamp_day.jpg');
+  transition: opacity 500ms ease-in-out;
+  z-index: 2;
+  opacity: 1;
+
+  @media only screen and (max-width:767px) {
+    animation: lightON 3s ease-in;
+  }
+  &.hero-day.is-null {
+    opacity: 0;
+  }
+
+  @media only screen and (min-width:768px) {
+    transition: max-width 500ms ease-in-out;
+    max-width: 100%;
+    &.hero-day.is-full {
+      max-width: 100%;
+    }
+    &.hero-day.is-null {
+      max-width: 0%;
+      opacity: 1;
+    }
+    max-width: 50%;
+    &:hover {
+      max-width: 52%;
+    }
+  }
+}
+
+@keyframes lightON {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+h2 {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  color: #202022;
+  line-height: 24px;
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1px;
+    background: #D7CBC5;
+    bottom: -0.75rem;
+    left: 50%;
+    margin-left: -1.25rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

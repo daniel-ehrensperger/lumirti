@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
+body,html{
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.wrapper {
+  @include container(80em);
+}

@@ -1,47 +1,33 @@
 //----------------------------------*\
-// SCSS MIXINS
+// FRAMEWORKS
 //----------------------------------*/
-
-@import 'mixins/_position.scss';
+@import "../../bower_components/susy/sass/susy";
 
 //----------------------------------*\
-// CONFIG MODULES
+// BASE
 //----------------------------------*/
-
-// Config modules
-@import 'modules/_vars.scss';
-@import 'modules/_clearfix.scss';
-@import 'modules/_defaults.scss';
-@import 'modules/_normalize.scss';
-//----------------------------------*\
-// PARTIALS
-//----------------------------------*/
-
-@import 'partials/_header.scss';
-@import 'partials/_nav.scss';
-@import 'partials/_sidebar.scss';
-@import 'partials/_main.scss';
-@import 'partials/_footer.scss';
+@import 'base/_variables.scss';
+@import 'base/_normalize.scss';
+@import 'base/_defaults.scss';
+@import 'base/_misc.scss';
+@import 'base/_typography.scss';
 
 //----------------------------------*\
-// OBJECTS & MODULES
+// LAYOUT
 //----------------------------------*/
+@import 'layout/_header.scss';
+@import 'layout/_nav.scss';
+@import 'layout/_main.scss';
+@import 'layout/_footer.scss';
 
-@import 'modules/_buttons.scss';
-@import 'modules/_inputs.scss';
-@import 'modules/_lists.scss';
-@import 'modules/_typography.scss';
-@import 'modules/_misc.scss';
-@import 'modules/_app.scss';
-@import 'modules/_flickity.scss';
+//----------------------------------*\
+// MODULES
+//----------------------------------*/
+@import 'module/_buttons.scss';
+@import 'module/_inputs.scss';
+@import 'module/_lists.scss';
+@import 'module/_hero.scss';
 
 
 // Enhancement modules
-@import 'modules/_breakpoints.scss';
-@import 'modules/_print.scss';
-
-//----------------------------------*\
-// VENDOR
-//----------------------------------*/
-
-@import 'vendor/_external.scss';
+@import 'base/_print.scss';

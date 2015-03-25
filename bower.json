@@ -1,0 +1,19 @@
+{
+  "name": "lumitri",
+  "version": "0.0.1",
+  "homepage": "https://github.com/daniel-ehrensperger/lumirti",
+  "authors": [
+    "Pierre <fritschpierre@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2"
+  }
+}
