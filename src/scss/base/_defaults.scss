@@ -9,6 +9,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   color: #444;
+  letter-spacing: -0.03em;
 }
 body,html{
 	min-height: 100vh;
@@ -16,5 +17,8 @@ body,html{
 }
 
 .wrapper {
-  @include container(80em);
+  @include container;
+  @media only screen and (min-width:768px) {
+    @include container(12);
+  }
 }

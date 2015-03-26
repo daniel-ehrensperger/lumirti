@@ -328,20 +328,42 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #444; }
+  color: #444;
+  letter-spacing: -0.03em; }
 
 body, html {
   min-height: 100vh;
   overflow: hidden; }
 
 .wrapper {
-  max-width: 80em;
+  max-width: 300px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(204, 255, 204, 0.8), rgba(255, 255, 255, 0.8) 75%, transparent 75%);
+  background-image: linear-gradient(to right, rgba(204, 255, 204, 0.8), rgba(255, 255, 255, 0.8) 75%, transparent 75%);
+  background-size: 26.66667%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top; }
   .wrapper:after {
     content: " ";
     display: block;
     clear: both; }
+  @media only screen and (min-width: 768px) {
+    .wrapper {
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto;
+      background-image: -webkit-linear-gradient(left, rgba(204, 255, 204, 0.8), rgba(255, 255, 255, 0.8) 75%, transparent 75%);
+      background-image: linear-gradient(to right, rgba(204, 255, 204, 0.8), rgba(255, 255, 255, 0.8) 75%, transparent 75%);
+      background-size: 8.51064%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+      .wrapper:after {
+        content: " ";
+        display: block;
+        clear: both; } }
 
 ::-moz-selection {
   background: #333;
@@ -386,6 +408,16 @@ h2 {
 .text-center {
   text-align: center; }
 
+p {
+  font-weight: 300;
+  color: #575753;
+  font-size: 1rem;
+  line-height: 1.5rem; }
+  @media only screen and (min-width: 768px) {
+    p.is-large {
+      font-size: 1.375rem;
+      line-height: 2.25rem; } }
+
 .header {
   position: relative;
   background-color: #111; }
@@ -408,10 +440,10 @@ h2 {
   list-style: none; }
 
 .main-chapo {
-  width: 66.10169%;
+  width: 65.95745%;
   float: left;
-  margin-right: 1.69492%;
-  margin-left: 16.94915%; }
+  margin-right: 2.12766%;
+  margin-left: 17.02128%; }
 
 .hero {
   display: block;
@@ -441,7 +473,8 @@ h2 {
 .hero-day {
   background-color: #eee;
   background-image: url("/assets/img/lamp_day.jpg");
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
   z-index: 2;
   opacity: 1; }
   @media only screen and (max-width: 767px) {
@@ -452,8 +485,8 @@ h2 {
     opacity: 0; }
   @media only screen and (min-width: 768px) {
     .hero-day {
-      transition: max-width 500ms ease-in-out;
-      max-width: 100%;
+      -webkit-transition: max-width 500ms ease-in-out;
+              transition: max-width 500ms ease-in-out;
       max-width: 50%; }
       .hero-day.hero-day.is-full {
         max-width: 100%; }

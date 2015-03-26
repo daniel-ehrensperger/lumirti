@@ -48,12 +48,19 @@ gulp.task('js',function(){
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(null, {
-        server: {
-            baseDir: "app"
-        }
-    });
+  browserSync({
+    server: {
+      baseDir: ['app', '.tmp'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    },
+    notify: false,
+    debugInfo: false,
+    host: 'localhost'
+  });
 });
+
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
