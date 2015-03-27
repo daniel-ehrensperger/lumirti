@@ -2,11 +2,11 @@ $base-font-size: 16px;
 $base-line-height: 24px;
 
 $susy: (
-  columns: 4,
+  columns: 12,
   gutters: (20/60),
   column-width: 60px,
   debug: (
-    image: show-columns,
+    image: hide,
     color: rgba(#cfc, 0.8),
     output: background,
     toggle: top right,

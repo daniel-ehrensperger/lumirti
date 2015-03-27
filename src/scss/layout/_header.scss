@@ -3,15 +3,15 @@
   background-color: #111;
 }
 .logo {
-  position: fixed;
+  position: absolute;
   z-index: 4;
   top: 0;
   left: 50%;
-  width: 7.50em;
-  margin-left: -3.75rem;
+  width: 6em;
+  margin-left: -3rem;
   @media only screen and (min-width:768px) {
-    width: 11.250em;
-    margin-left: -5.625rem;
+    width: 8em;
+    margin-left: -4rem;
   }
   img {
     max-width: 100%;

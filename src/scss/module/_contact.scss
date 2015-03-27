@@ -1,0 +1,51 @@
+.contact {
+  margin: 0 rem-calc(24);
+  margin-bottom: rem-calc(48); 
+
+  @media only screen and (min-width:480px) {
+    margin-top: rem-calc(96); 
+    margin-bottom: rem-calc(144); 
+    @include span(8 of 12);
+    @include push(2 of 12);
+  }
+  @media only screen and (min-width:768px) {
+    input,
+    textarea {
+      text-align: left;
+    }
+  }
+}
+
+.contact-input {
+  @media only screen and (min-width:768px) {
+    @include container;
+    margin-top: rem-calc(72);
+  }
+}
+
+.contact-infos {
+  @media only screen and (min-width:768px) {
+    @include span(4 of 8);
+  }
+}
+.contact-msg {
+  margin-top: rem-calc(12);
+  @media only screen and (min-width:768px) {
+    margin-top: 0;
+    @include span(4 last of 8);
+    textarea {
+      min-height: rem-calc(168);
+    }
+  }
+}
+.contact-send {
+  margin-top: rem-calc(12);
+  @media only screen and (min-width:768px) {
+    clear: both;
+    margin: rem-calc(72) auto 0;
+    max-width: span(6);
+  }
+}
+.contact label span {
+  display:none;
+}

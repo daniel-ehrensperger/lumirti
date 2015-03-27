@@ -5,12 +5,17 @@ h2 {
   margin-top: 3rem;
   margin-bottom: 2rem;
 
-  font-size: 1.125rem;
+  font-size: rem-calc(18);
+  line-height: rem-calc(24);
   text-transform: uppercase;
   font-weight: 600;
-
   color: #202022;
-  line-height: 24px;
+  
+  @media only screen and (min-width:768px) {
+    font-size: rem-calc(24);
+    line-height: rem-calc(36);
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -22,6 +27,7 @@ h2 {
     left: 50%;
     margin-left: -1.25rem;
   }
+
 }
 
 .text-center {
@@ -33,8 +39,14 @@ p {
   color: #575753;
   font-size: rem-calc(16);
   line-height: rem-calc(24);
+  margin: 0;
+
+  @media only screen and (min-width:768px) {
+    font-size: rem-calc(18);
+  }
 
   &.is-large {
+    font-size: rem-calc(16);
     @media only screen and (min-width:768px) {
       font-size: rem-calc(22);
       line-height: rem-calc(36);

@@ -1,7 +1,73 @@
 .main {
 }
 .main-chapo {
-
   @include span(8 of 12);
   @include push(2 of 12);
+  margin-bottom: rem-calc(48); 
+
+  @media only screen and (min-width:768px) {
+    margin-top: rem-calc(96); 
+    margin-bottom: rem-calc(144); 
+  }
+
+  p {
+    @media only screen and (min-width:768px) {
+      margin-top: rem-calc(72);
+    }
+  }
+}
+
+.main-detail {
+  @media only screen and (min-width:480px) {
+    display: flex; 
+  }
+  @media only screen and (min-width:960px) {
+    display: inline-block;
+    @include span(4);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+
+    @media only screen and (min-width:480px) {
+      width: auto;
+      max-width: 100%;
+      min-width: rem-calc(300);
+    }
+  }
+  p {
+    text-align: center;
+    padding: rem-calc(36) rem-calc(24);
+    @media only screen and (min-width:480px) and (max-width: 959px) {
+      text-align: left;
+    }
+    @media only screen and (min-width:960px) {
+      clear: both;
+    }
+  }
+  &.is-bronz {
+    background: #D9D1CC;
+  }
+  &.is-gold {
+    background: #E5E4E2;
+  }
+  &.is-silver {
+    background: #E5E8E8;
+    @media only screen and (min-width:960px) {
+      @include last;
+    }
+  }
+  &:nth-child(2n){
+    p {
+      @media only screen and (min-width:480px) and (max-width: 959px) {
+        text-align: right;
+      }
+    }
+    img {
+      @media only screen and (min-width:480px) and (max-width: 959px) {
+        order: 2;
+      }
+    }
+  }
 }

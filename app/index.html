@@ -30,8 +30,12 @@
         </ul>
       </nav> -->
       <div class="hero">
-        <div class="hero-night"></div>
-        <div class="hero-day"></div>
+        <div class="hero-night">
+          <figure><img src="assets/img/lamp_night.jpg" alt=""></figure>
+        </div>
+        <div class="hero-day">
+          <figure><img src="assets/img/lamp_day.jpg" alt=""></figure>
+        </div>
       </div>
     </header>
 
@@ -43,20 +47,60 @@
         </section>
       </div>
       <div class="wrapper">
-        <section class="main-detail">
+        <section class="main-detail is-bronz">
+          <img src="http://placehold.it/300x180/E5DDD8/ffffff/" alt="">
           <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.</p>
         </section>
-        <section class="main-detail">
+        <section class="main-detail is-gold">
+          <img src="http://placehold.it/300x180/F2F1EF/ffffff/" alt="">
           <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.</p>
         </section>
-        <section class="main-detail">
+        <section class="main-detail is-silver">
+          <img src="http://placehold.it/300x180/EEF1F1/ffffff/" alt="">
           <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.</p>
         </section>
       </div>
     </main>
 
-    <footer class="footer" role="contentinfo">
+    <aside>
+      <div class="wrapper">
+        <form id="contact-form" action="/" method="post" class="contact text-center">
+          <h2>Get in touch</h2>
 
+          <div class="contact-input">
+            <div class="contact-infos">
+              <label>
+                <span>Name: (required)</span>
+                <input placeholder="Name" type="text" tabindex="1" required autofocus>
+              </label>
+              <label>
+                <span>Email: (required)</span>
+                <input placeholder="Email" type="email" tabindex="2" required>
+              </label>
+              <label>
+                <span>Telephone: (required)</span>
+                <input placeholder="Phone" type="tel" tabindex="3" required>
+              </label>
+            </div>
+            <div class="contact-msg">
+              <label>
+                <span>Message: (required)</span>
+                <textarea placeholder="Message" tabindex="5" required></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="contact-send">
+            <button name="submit" type="submit" id="contact-submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <footer class="footer" role="contentinfo">
+      <div class="wrapper text-center">
+        <p>This lamp is an original creation from the great DanTheCan, designer in Bern</p>
+        <p><small>This page was designed with love by <a href="https://twitter.com/pierrefritsch">@pierrefritsch</a></small></p>
+      </div>
     </footer>
 
     <script src="assets/components/jquery/jquery.min.js"></script>

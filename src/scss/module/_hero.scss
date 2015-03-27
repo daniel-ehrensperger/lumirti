@@ -2,25 +2,37 @@
   display: block;
   position: relative;
   width: 100vw;
-  height: 60vh;
+  height: rem-calc(720);
+  max-height: 60vh;
   cursor: pointer;
+  transition: max-height 300ms ease-in-out;
 }
 
 .hero-day,
 .hero-night {
   position: absolute;
   top: 0;
-  bottom: 0;
   width: 100%;
-  background-position: top center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: auto 60%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  figure {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  img {
+    position: absolute;
+    left: 50vw;
+    max-height: 100%;
+    transform: translateX(-50%);
+  }
 }
 
 .hero-night {
   background-color: #111;
-  background-image: image-url('assets/img/lamp_night.jpg');
   z-index: 1;
 
   @media only screen and (min-width:768px) {
@@ -32,13 +44,12 @@
 
 .hero-day {
   background-color: #eee;
-  background-image: image-url('assets/img/lamp_day.jpg');
   transition: opacity 500ms ease-in-out;
   z-index: 2;
   opacity: 1;
 
   @media only screen and (max-width:767px) {
-    animation: lightON 3s ease-in;
+    animation: lightON 2500ms ease-in;
   }
   &.hero-day.is-null {
     opacity: 0;

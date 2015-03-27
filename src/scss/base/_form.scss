@@ -1,0 +1,74 @@
+//  Inputs
+input,
+select,
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}
+input[type="search"],
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  color: #555;
+  transition: background 300ms ease-out;
+  outline: 0;
+  &:focus {
+    background: #FFFDDF;
+  }
+}
+input[type="search"],
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea,
+button {
+  text-align: center;
+  font-size: rem-calc(16);
+  padding: rem-calc(12);
+  border: 2px solid #E5E8E8;
+  vertical-align: top;
+  min-width: 100%;
+}
+input[type="search"],
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  height: rem-calc(48);
+}
+textarea {
+  height: auto;
+  min-height: rem-calc(120);
+}
+input[type=radio],
+input[type=checkbox] {
+  vertical-align: middle;
+}
+
+label {
+  display: block;
+  margin-top: rem-calc(12);
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+button,
+.button {
+  background: #4C453E;
+  border: 0;
+  color: #fff;
+  font-weight: 300;
+}
