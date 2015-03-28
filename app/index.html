@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="@pierrefritsch">
 
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
@@ -64,42 +65,44 @@
 
     <aside>
       <div class="wrapper">
-        <form id="contact-form" action="/" method="post" class="contact text-center">
-          <h2>Get in touch</h2>
-
-          <div class="contact-input">
-            <div class="contact-infos">
-              <label>
-                <span>Name: (required)</span>
-                <input placeholder="Name" type="text" tabindex="1" required autofocus>
-              </label>
-              <label>
-                <span>Email: (required)</span>
-                <input placeholder="Email" type="email" tabindex="2" required>
-              </label>
-              <label>
-                <span>Telephone: (required)</span>
-                <input placeholder="Phone" type="tel" tabindex="3" required>
-              </label>
+        <div id="contact-form" class="contact text-center">
+          <h2>Contact</h2>
+          <div class="contact-body">
+            <div class="contact-input">
+              <div class="contact-infos">
+                <label>
+                  <span>Name: (required)</span>
+                  <input name="name" placeholder="Name" type="text" tabindex="1" required="true">
+                </label>
+                <label>
+                  <span>Email: (required)</span>
+                  <input name="email" placeholder="Email" type="email" tabindex="2" required="true">
+                </label>
+                <label>
+                  <span>Telephone: (required)</span>
+                  <input name="phone" placeholder="Phone" type="tel" tabindex="3">
+                </label>
+              </div>
+              <div class="contact-msg">
+                <label>
+                  <span>Message: (required)</span>
+                  <textarea name="message" placeholder="Message" tabindex="4" required="true"></textarea>
+                </label>
+              </div>
             </div>
-            <div class="contact-msg">
-              <label>
-                <span>Message: (required)</span>
-                <textarea placeholder="Message" tabindex="5" required></textarea>
-              </label>
+            <div class="contact-result"></div>
+            <div class="contact-send">
+              <input id="submit-btn" class="button" type="submit" value="Send" />
             </div>
           </div>
-          <div class="contact-send">
-            <button name="submit" type="submit" id="contact-submit">Send</button>
-          </div>
-        </form>
+        </div>
       </div>
     </aside>
 
     <footer class="footer" role="contentinfo">
       <div class="wrapper text-center">
-        <p>This lamp is an original creation from the great DanTheCan, designer in Bern</p>
-        <p><small>This page was designed with love by <a href="https://twitter.com/pierrefritsch">@pierrefritsch</a></small></p>
+        <p>Original creation from Daniel Ehrensperger, Designer</p>
+        <p class="footer-copy">This page was designed with love by <a href="https://twitter.com/pierrefritsch">@pierrefritsch</a></p>
       </div>
     </footer>
 

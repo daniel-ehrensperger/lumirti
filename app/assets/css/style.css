@@ -329,7 +329,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   color: #444;
-  letter-spacing: -0.03em; }
+  letter-spacing: -0.015em; }
 
 body, html {
   min-height: 100vh; }
@@ -417,13 +417,15 @@ input[type="search"], input[type="text"], input[type="number"], input[type="date
   input[type="search"]:focus, input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
     background: #FFFDDF; }
 
-input[type="search"], input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="password"], input[type="email"], input[type="tel"], textarea, button {
+input[type="search"], input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="password"], input[type="email"], input[type="tel"], input[type="submit"], textarea, button {
   text-align: center;
   font-size: 1rem;
   padding: 0.75rem;
   border: 2px solid #E5E8E8;
   vertical-align: top;
   min-width: 100%; }
+  input[type="search"].is-empty, input[type="text"].is-empty, input[type="number"].is-empty, input[type="date"].is-empty, input[type="time"].is-empty, input[type="password"].is-empty, input[type="email"].is-empty, input[type="tel"].is-empty, input[type="submit"].is-empty, textarea.is-empty, button.is-empty {
+    border-color: #CD5635; }
 
 input[type="search"], input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="password"], input[type="email"], input[type="tel"] {
   height: 3rem; }
@@ -441,11 +443,15 @@ label {
   label:first-child {
     margin-top: 0; }
 
-button, .button {
+button, input[type="submit"], .button {
   background: #4C453E;
   border: 0;
   color: #fff;
-  font-weight: 300; }
+  font-weight: 300;
+  -webkit-transition: background 300ms ease-in-out;
+          transition: background 300ms ease-in-out; }
+  button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus, .button:hover, .button:focus {
+    background: #231D18; }
 
 .header {
   position: relative;
@@ -534,9 +540,20 @@ button, .button {
 .footer {
   background-color: #8E8680;
   padding: 2.25rem 1.5rem; }
+  @media only screen and (min-width: 768px) {
+    .footer {
+      padding-top: 3rem; } }
   .footer p {
     font-size: 0.875rem;
     color: #fff; }
+  .footer .footer-copy {
+    font-size: 0.75rem;
+    margin-top: 2.25rem;
+    color: #E5E4E2; }
+    .footer .footer-copy a {
+      color: #E5E4E2; }
+    .footer .footer-copy a:hover {
+      color: #fff; }
 
 .hero {
   display: block;
@@ -627,15 +644,29 @@ button, .button {
       margin-right: 2.12766%;
       margin-left: 17.02128%; } }
   @media only screen and (min-width: 768px) {
-    .contact input, .contact textarea {
+    .contact .contact-input input, .contact textarea {
       text-align: left; } }
+
+.contact-result, .contact-body {
+  margin-top: 4.5rem; }
+
+.contact-result {
+  display: none; }
+
+.contact-result span {
+  display: inline-block;
+  font-size: 1.125rem;
+  padding: 0.75rem; }
+  .contact-result span.is-error {
+    color: #CD5635; }
+  .contact-result span.is-success {
+    color: #689A53; }
 
 @media only screen and (min-width: 768px) {
   .contact-input {
     max-width: 940px;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 4.5rem; }
+    margin-right: auto; }
     .contact-input:after {
       content: " ";
       display: block;

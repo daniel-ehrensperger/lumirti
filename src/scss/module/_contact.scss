@@ -9,17 +9,37 @@
     @include push(2 of 12);
   }
   @media only screen and (min-width:768px) {
-    input,
+    .contact-input input,
     textarea {
       text-align: left;
     }
   }
 }
 
+.contact-result,
+.contact-body {
+    margin-top: rem-calc(72);
+}
+
+.contact-result {
+  display: none;
+}
+.contact-result span {
+  display: inline-block;
+  font-size: rem-calc(18);
+  padding: rem-calc(12);
+
+  &.is-error {
+    color: #CD5635;
+  }
+  &.is-success {
+    color: #689A53;
+  }
+}
+
 .contact-input {
   @media only screen and (min-width:768px) {
     @include container;
-    margin-top: rem-calc(72);
   }
 }
 

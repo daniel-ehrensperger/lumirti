@@ -1,8 +1,25 @@
 .footer {
   background-color: #8E8680;
   padding: rem-calc(36) rem-calc(24);
+  
+  @media only screen and (min-width:768px) {
+    padding-top: rem-calc(48);  
+  }
+
   p {
     font-size: rem-calc(14); 
     color: #fff;
+  }
+  .footer-copy {
+    font-size: rem-calc(12); 
+    margin-top: rem-calc(36);
+    color: #E5E4E2;
+
+    a {
+      color: #E5E4E2;
+    }
+    a:hover {
+      color: #fff;
+    }
   }
 }

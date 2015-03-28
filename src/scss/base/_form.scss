@@ -29,6 +29,7 @@ input[type="time"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
+input[type="submit"],
 textarea,
 button {
   text-align: center;
@@ -37,6 +38,10 @@ button {
   border: 2px solid #E5E8E8;
   vertical-align: top;
   min-width: 100%;
+
+  &.is-empty {
+    border-color: #CD5635;
+  }
 }
 input[type="search"],
 input[type="text"],
@@ -66,9 +71,16 @@ label {
 }
 
 button,
+input[type="submit"],
 .button {
   background: #4C453E;
   border: 0;
   color: #fff;
   font-weight: 300;
+  transition: background 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background: #231D18;
+  }
 }
