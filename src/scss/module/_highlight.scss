@@ -1,0 +1,35 @@
+.highlight-bg {
+	width: 100%;
+	height: rem-calc(720);
+	background-size: cover;
+	margin-top: rem-calc(96);
+
+	&.is-day {
+		background: image-url('assets/img/lamp_day.jpg') red no-repeat center center;
+	}
+
+}
+
+.highlight {
+	margin-top: rem-calc(96);
+	@media only screen and (min-width:768px) {
+		display: flex; 
+		flex-direction: row;
+	}
+}
+.highlight-img {
+	@media only screen and (min-width:768px) {
+		width: 33%;
+  	}
+}
+.highlight-img img {
+	display: block;
+	max-width: 100%;
+}
+.highlight-text {
+	background: pink;
+	padding: rem-calc(48);
+	@media only screen and (min-width:768px) {
+		width: 67%;
+  	}
+}
