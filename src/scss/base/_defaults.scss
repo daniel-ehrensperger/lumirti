@@ -18,3 +18,10 @@ body,html{
 .wrapper {
   @include container;
 }
+
+.has-space {
+	margin-top: rem-calc(60);
+	@media only screen and (min-width:768px) {
+		margin-top: rem-calc(120);
+	}
+}

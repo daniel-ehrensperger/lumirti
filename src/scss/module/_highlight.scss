@@ -12,14 +12,15 @@
 
 .highlight {
 	margin-top: rem-calc(96);
-	@media only screen and (min-width:768px) {
+	/*@media only screen and (min-width:768px) {
 		display: flex; 
 		flex-direction: row;
-	}
+	}*/
 }
 .highlight-img {
 	@media only screen and (min-width:768px) {
-		width: 33%;
+		@include span(4 wide of 12);
+		margin-right: 0;
   	}
 }
 .highlight-img img {
@@ -30,6 +31,6 @@
 	background: pink;
 	padding: rem-calc(48);
 	@media only screen and (min-width:768px) {
-		width: 67%;
+		@include span(8 last of 12);
   	}
 }

@@ -343,6 +343,12 @@ body, html {
     display: block;
     clear: both; }
 
+.has-space {
+  margin-top: 3.75rem; }
+  @media only screen and (min-width: 768px) {
+    .has-space {
+      margin-top: 7.5rem; } }
+
 ::-moz-selection {
   background: #333;
   color: #fff;
@@ -371,7 +377,8 @@ h2 {
   line-height: 1.5rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: #202022; }
+  color: #202022;
+  /* Thin underline */ }
   @media only screen and (min-width: 768px) {
     h2 {
       font-size: 1.5rem;
@@ -386,6 +393,10 @@ h2 {
     bottom: -0.75rem;
     left: 50%;
     margin-left: -1.25rem; }
+
+h3 {
+  font-weight: 400;
+  margin: 0.75rem 0; }
 
 .text-center {
   text-align: center; }
@@ -405,13 +416,16 @@ p {
       p.is-large {
         font-size: 1.375rem;
         line-height: 2.25rem; } }
+  p + p {
+    margin-top: 1.5rem; }
 
 input, select, textarea {
   font-family: 'Open Sans', sans-serif; }
 
 input[type="search"], input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="password"], input[type="email"], input[type="tel"], select, textarea {
   color: #555;
-  transition: background 300ms ease-out;
+  -webkit-transition: background 300ms ease-out;
+          transition: background 300ms ease-out;
   outline: 0; }
   input[type="search"]:focus, input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
     background: #FFFDDF; }
@@ -447,7 +461,8 @@ button, input[type="submit"], .button {
   border: 0;
   color: #fff;
   font-weight: 300;
-  transition: background 300ms ease-in-out; }
+  -webkit-transition: background 300ms ease-in-out;
+          transition: background 300ms ease-in-out; }
   button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus, .button:hover, .button:focus {
     background: #231D18; }
 
@@ -486,52 +501,59 @@ button, input[type="submit"], .button {
     .main-chapo p {
       margin-top: 4.5rem; } }
 
-@media only screen and (min-width: 480px) {
-  .main-detail {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; } }
-@media only screen and (min-width: 960px) {
-  .main-detail {
-    display: inline-block;
-    width: 31.91489%;
-    float: left;
-    margin-right: 2.12766%; } }
-.main-detail img {
-  display: block;
-  width: 100%; }
+.main-detail {
+  text-align: center; }
   @media only screen and (min-width: 480px) {
-    .main-detail img {
-      width: auto;
-      max-width: 100%;
-      min-width: 18.75rem; } }
-.main-detail p {
-  text-align: center;
-  padding: 2.25rem 1.5rem; }
-  @media only screen and (min-width: 480px) and (max-width: 959px) {
-    .main-detail p {
-      text-align: left; } }
+    .main-detail {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
   @media only screen and (min-width: 960px) {
-    .main-detail p {
-      clear: both; } }
-.main-detail.is-bronz {
-  background: #D9D1CC; }
-.main-detail.is-gold {
-  background: #E5E4E2; }
-.main-detail.is-silver {
-  background: #E5E8E8; }
+    .main-detail {
+      display: inline-block;
+      width: 31.91489%;
+      float: left;
+      margin-right: 2.12766%; } }
+  .main-detail img {
+    display: block;
+    width: 100%; }
+    @media only screen and (min-width: 480px) {
+      .main-detail img {
+        width: auto;
+        max-width: 100%;
+        min-width: 18.75rem; } }
+  .main-detail h3 {
+    margin: 2.25rem 0 0; }
+  .main-detail p {
+    margin: 1.5rem 1.5rem 2.25rem; }
+    @media only screen and (min-width: 480px) and (max-width: 959px) {
+      .main-detail p {
+        text-align: left; } }
+    @media only screen and (min-width: 960px) {
+      .main-detail p {
+        clear: both; } }
+  .main-detail.is-bronz {
+    background: #D9D1CC; }
+  .main-detail.is-gold {
+    background: #E5E4E2; }
+  .main-detail.is-silver {
+    background: #E5E8E8; }
+  .main-detail.is-beige {
+    background: #DED2CA; }
   @media only screen and (min-width: 960px) {
-    .main-detail.is-silver {
+    .main-detail:last-child {
       float: right;
       margin-right: 0; } }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .main-detail:nth-child(2n) p {
-    text-align: right; } }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .main-detail:nth-child(2n) img {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; } }
+  @media only screen and (min-width: 480px) and (max-width: 959px) {
+    .main-detail:nth-child(2n) p {
+      text-align: right; } }
+  @media only screen and (min-width: 480px) and (max-width: 959px) {
+    .main-detail:nth-child(2n) img {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; } }
 
 .footer {
   background-color: #8E8680;
@@ -554,11 +576,12 @@ button, input[type="submit"], .button {
 .hero {
   display: block;
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 45rem;
   max-height: 60vh;
   cursor: pointer;
-  transition: max-height 300ms ease-in-out; }
+  -webkit-transition: max-height 300ms ease-in-out;
+          transition: max-height 300ms ease-in-out; }
 
 .hero-day, .hero-night {
   position: absolute;
@@ -566,7 +589,11 @@ button, input[type="submit"], .button {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  text-align: center; }
+  text-align: center;
+  padding-top: 3.75rem; }
+  @media only screen and (min-width: 768px) {
+    .hero-day, .hero-night {
+      padding-top: 7.5rem; } }
   .hero-day figure, .hero-night figure {
     display: block;
     position: relative;
@@ -582,15 +609,16 @@ button, input[type="submit"], .button {
             transform: translateX(-50%); }
 
 .hero-night {
-  background-color: #111;
+  background-color: #000;
   z-index: 1; }
   @media only screen and (min-width: 768px) {
     .hero-night:hover + .hero-day {
       max-width: 48%; } }
 
 .hero-day {
-  background-color: #eee;
-  transition: opacity 500ms ease-in-out;
+  background-color: #f5f5f5;
+  -webkit-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
   z-index: 2;
   opacity: 1; }
   @media only screen and (max-width: 767px) {
@@ -601,7 +629,8 @@ button, input[type="submit"], .button {
     opacity: 0; }
   @media only screen and (min-width: 768px) {
     .hero-day {
-      transition: max-width 500ms ease-in-out;
+      -webkit-transition: max-width 500ms ease-in-out;
+              transition: max-width 500ms ease-in-out;
       max-width: 50%; }
       .hero-day.hero-day.is-full {
         max-width: 100%; }
@@ -702,19 +731,18 @@ button, input[type="submit"], .button {
     background: url("/assets/img/lamp_day.jpg") red no-repeat center center; }
 
 .highlight {
-  margin-top: 6rem; }
-  @media only screen and (min-width: 768px) {
-    .highlight {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row; } }
+  margin-top: 6rem;
+  /*@media only screen and (min-width:768px) {
+		display: flex; 
+		flex-direction: row;
+	}*/ }
 
 @media only screen and (min-width: 768px) {
   .highlight-img {
-    width: 33%; } }
+    width: 34.04255%;
+    float: left;
+    margin-right: 2.08333%;
+    margin-right: 0; } }
 
 .highlight-img img {
   display: block;
@@ -725,7 +753,9 @@ button, input[type="submit"], .button {
   padding: 3rem; }
   @media only screen and (min-width: 768px) {
     .highlight-text {
-      width: 67%; } }
+      width: 65.95745%;
+      float: right;
+      margin-right: 0; } }
 
 @media print {
   * {
