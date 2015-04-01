@@ -11,21 +11,24 @@
 }
 
 .highlight {
-	margin-top: rem-calc(96);
+	@include container;
+	background-color: #231D18;
 	/*@media only screen and (min-width:768px) {
 		display: flex; 
 		flex-direction: row;
 	}*/
 }
 .highlight-img {
+	text-align: center;
 	@media only screen and (min-width:768px) {
 		@include span(4 wide of 12);
 		margin-right: 0;
-  	}
+	}
 }
 .highlight-img img {
 	display: block;
 	max-width: 100%;
+	margin: 0 auto; 
 }
 .highlight-text {
 	background: #f5f5f5;

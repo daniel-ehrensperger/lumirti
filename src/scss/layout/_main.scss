@@ -18,6 +18,7 @@
 }
 
 .main-detail {
+  overflow: hidden;
   text-align: center;
   @media only screen and (min-width:480px) {
     display: flex; 
@@ -37,17 +38,20 @@
       min-width: rem-calc(300);
     }
   }
-  h3 {
-    margin: rem-calc(36) 0 0;
-  }
-  p {
-    margin: rem-calc(24) rem-calc(24) rem-calc(36);
+  .main-detail-text {
+    margin: rem-calc(36) rem-calc(24) ;
     @media only screen and (min-width:480px) and (max-width: 959px) {
       text-align: left;
     }
     @media only screen and (min-width:960px) {
       clear: both;
     }
+  }
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin-top: rem-calc(24);
   }
   &.is-bronz {
     background: #D9D1CC;
@@ -67,7 +71,7 @@
     }
   }
   &:nth-child(2n){
-    p {
+    .main-detail-text {
       @media only screen and (min-width:480px) and (max-width: 959px) {
         text-align: right;
       }

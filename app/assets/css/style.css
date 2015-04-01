@@ -502,6 +502,7 @@ button, input[type="submit"], .button {
       margin-top: 4.5rem; } }
 
 .main-detail {
+  overflow: hidden;
   text-align: center; }
   @media only screen and (min-width: 480px) {
     .main-detail {
@@ -523,16 +524,18 @@ button, input[type="submit"], .button {
         width: auto;
         max-width: 100%;
         min-width: 18.75rem; } }
-  .main-detail h3 {
-    margin: 2.25rem 0 0; }
-  .main-detail p {
-    margin: 1.5rem 1.5rem 2.25rem; }
+  .main-detail .main-detail-text {
+    margin: 2.25rem 1.5rem; }
     @media only screen and (min-width: 480px) and (max-width: 959px) {
-      .main-detail p {
+      .main-detail .main-detail-text {
         text-align: left; } }
     @media only screen and (min-width: 960px) {
-      .main-detail p {
+      .main-detail .main-detail-text {
         clear: both; } }
+  .main-detail h3 {
+    margin: 0; }
+  .main-detail p {
+    margin-top: 1.5rem; }
   .main-detail.is-bronz {
     background: #D9D1CC; }
   .main-detail.is-gold {
@@ -546,7 +549,7 @@ button, input[type="submit"], .button {
       float: right;
       margin-right: 0; } }
   @media only screen and (min-width: 480px) and (max-width: 959px) {
-    .main-detail:nth-child(2n) p {
+    .main-detail:nth-child(2n) .main-detail-text {
       text-align: right; } }
   @media only screen and (min-width: 480px) and (max-width: 959px) {
     .main-detail:nth-child(2n) img {
@@ -731,22 +734,32 @@ button, input[type="submit"], .button {
     background: url("/assets/img/daniel_ehrensperger.jpg") #f5f5f5 no-repeat center center; }
 
 .highlight {
-  margin-top: 6rem;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #231D18;
   /*@media only screen and (min-width:768px) {
 		display: flex; 
 		flex-direction: row;
 	}*/ }
+  .highlight:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
-@media only screen and (min-width: 768px) {
-  .highlight-img {
-    width: 34.04255%;
-    float: left;
-    margin-right: 2.08333%;
-    margin-right: 0; } }
+.highlight-img {
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .highlight-img {
+      width: 34.04255%;
+      float: left;
+      margin-right: 2.08333%;
+      margin-right: 0; } }
 
 .highlight-img img {
   display: block;
-  max-width: 100%; }
+  max-width: 100%;
+  margin: 0 auto; }
 
 .highlight-text {
   background: #f5f5f5;
