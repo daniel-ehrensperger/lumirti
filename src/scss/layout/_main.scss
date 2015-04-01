@@ -3,7 +3,7 @@
 .main-chapo {
   @include span(8 of 12);
   @include push(2 of 12);
-  margin-bottom: rem-calc(48); 
+  margin-bottom: rem-calc(48);
 
   @media only screen and (min-width:768px) {
     margin-top: rem-calc(96); 
@@ -16,14 +16,46 @@
     }
   }
 }
+.main-description {
+  background: #E5E4E2;
+  padding: rem-calc(48) 0;
+
+  @media only screen and (min-width:768px) {
+    padding: rem-calc(96) 0;
+  }
+}
+.main-description-text {
+  text-align: left;
+  display: inline-block;
+  @include span(8 of 12);
+  @include push(2 of 12);
+
+  &:last-child { 
+    margin-top: rem-calc(48);
+  }
+
+  @media only screen and (min-width:768px) {
+    @include span(4 of 12);
+    @include push(1);
+    &:last-child {
+      @include push(2);
+      margin-top: 0;
+    }
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
 
 .main-detail {
   overflow: hidden;
   text-align: center;
   @media only screen and (min-width:480px) {
     display: flex; 
+    margin-top: rem-calc(1);
   }
   @media only screen and (min-width:960px) {
+    margin-top: 0;
     display: inline-block;
     @include span(4);
   }
@@ -42,6 +74,7 @@
     margin: rem-calc(36) rem-calc(24) ;
     @media only screen and (min-width:480px) and (max-width: 959px) {
       text-align: left;
+      margin: rem-calc(36) rem-calc(48);
     }
     @media only screen and (min-width:960px) {
       clear: both;

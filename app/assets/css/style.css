@@ -499,6 +499,34 @@ button, input[type="submit"], .button {
     .main-chapo p {
       margin-top: 4.5rem; } }
 
+.main-description {
+  background: #E5E4E2;
+  padding: 3rem 0; }
+  @media only screen and (min-width: 768px) {
+    .main-description {
+      padding: 6rem 0; } }
+
+.main-description-text {
+  text-align: left;
+  display: inline-block;
+  width: 65.95745%;
+  float: left;
+  margin-right: 2.12766%;
+  margin-left: 17.02128%; }
+  .main-description-text:last-child {
+    margin-top: 3rem; }
+  @media only screen and (min-width: 768px) {
+    .main-description-text {
+      width: 31.91489%;
+      float: left;
+      margin-right: 2.12766%;
+      margin-left: 8.51064%; }
+      .main-description-text:last-child {
+        margin-left: 17.02128%;
+        margin-top: 0; } }
+  .main-description-text h3 {
+    margin-top: 0; }
+
 .main-detail {
   overflow: hidden;
   text-align: center; }
@@ -506,9 +534,11 @@ button, input[type="submit"], .button {
     .main-detail {
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      margin-top: 0.0625rem; } }
   @media only screen and (min-width: 960px) {
     .main-detail {
+      margin-top: 0;
       display: inline-block;
       width: 31.91489%;
       float: left;
@@ -525,7 +555,8 @@ button, input[type="submit"], .button {
     margin: 2.25rem 1.5rem; }
     @media only screen and (min-width: 480px) and (max-width: 959px) {
       .main-detail .main-detail-text {
-        text-align: left; } }
+        text-align: left;
+        margin: 2.25rem 3rem; } }
     @media only screen and (min-width: 960px) {
       .main-detail .main-detail-text {
         clear: both; } }
@@ -556,7 +587,8 @@ button, input[type="submit"], .button {
 
 .footer {
   background-color: #8E8680;
-  padding: 2.25rem 1.5rem; }
+  padding: 2.25rem 1.5rem;
+  text-align: center; }
   @media only screen and (min-width: 768px) {
     .footer {
       padding-top: 3rem; } }
@@ -577,7 +609,7 @@ button, input[type="submit"], .button {
   position: relative;
   width: 100%;
   height: 45rem;
-  max-height: 60vh;
+  max-height: 100vh;
   cursor: pointer;
   transition: max-height 300ms ease-in-out; }
 
@@ -721,10 +753,13 @@ button, input[type="submit"], .button {
 .highlight-bg {
   width: 100%;
   height: 45rem;
-  background-size: cover;
-  margin-top: 6rem; }
-  .highlight-bg.is-day {
-    background: url("/assets/img/daniel_ehrensperger.jpg") #f5f5f5 no-repeat center center; }
+  max-height: 60vh;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  .highlight-bg.is-danu {
+    background-image: url("/assets/img/daniel_ehrensperger.jpg"); }
 
 .highlight {
   max-width: 940px;

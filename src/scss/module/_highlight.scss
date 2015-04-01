@@ -1,11 +1,14 @@
 .highlight-bg {
 	width: 100%;
 	height: rem-calc(720);
+	max-height: 60vh;
+	background-color: #f5f5f5;
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
-	margin-top: rem-calc(96);
 
-	&.is-day {
-		background: image-url('assets/img/daniel_ehrensperger.jpg') #f5f5f5 no-repeat center center;
+	&.is-danu {
+		background-image: image-url('assets/img/daniel_ehrensperger.jpg');
 	}
 
 }
